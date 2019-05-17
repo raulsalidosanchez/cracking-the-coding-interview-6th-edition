@@ -18,7 +18,7 @@ public class Q4_01_PalindromePermutation {
     }
 
     public static boolean checkPalindromePermutation(String entrada){
-        int par = 0, impar = 0;
+        int impar = 0;
 
         for (int i=0; i<entrada.length(); i++) {
             int cont = 0;
@@ -27,19 +27,16 @@ public class Q4_01_PalindromePermutation {
                     cont++;
                 }
             }
-            if(cont%2 == 0){
-                par++;
-            } else {
+
+            if(cont%2 != 0){
                 impar++;
+                if(impar > 1){
+                    return false;
+                }
             }
         }
 
-        if(impar > 1) {
-            return false;
-        } else {
-            return true;
-        }
-
+        return true;
     }
 
 }
