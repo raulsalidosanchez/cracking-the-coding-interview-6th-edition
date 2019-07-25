@@ -3,7 +3,7 @@ package Ch1ArraysAndStrings;
 public class Q1_01_isUnique {
 
     public static void main(String[] args) {
-        String cadena = "prueba";
+        String cadena = "pruepba";
 
         boolean result = isUniqueChars(cadena);
 
@@ -19,7 +19,7 @@ public class Q1_01_isUnique {
 
         boolean[] char_set = new boolean[128];
         for(int i=0; i<str.length(); i++){
-            int val = str.charAt(i);
+            char val = str.charAt(i);
             if(char_set[val]){
                 return false;
             }
